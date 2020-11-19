@@ -18,4 +18,6 @@ Step to install:
 
 ### How to use the application
 
-You still have to browse the list of exercises
+1. ``` Adding a task ```
+2. ``` Click on the "round" icon to validate a task or not ```
+3. ``` Click on the "trash" icon to delete a task ```
