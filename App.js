@@ -1,21 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React, { useState } from "react";
+import { StyleSheet, View } from "react-native";
+import HeaderTop from "./components/header";
+import ListTasks from "./containers/listTasks";
+import Footer from "./containers/footer";
 
-export default function App() {
+const App = () => {
+  const [nbTasks, setNbTasks] = useState(0);
+  const [nbChecked, setNbChecked] = useState(0);
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <HeaderTop nbTasks={nbTasks} nbChecked={nbChecked} />
+      <ListTasks
+        nbChecked={(nb) => setNbChecked(nb)}
+        nbTasks={(nb) => setNbTasks(nb)}
+      />
+      <Footer />
+      <StatusBar
+        animated={true}
+        barStyle="light-content"
+      />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
   },
 });
+
+export default App;
