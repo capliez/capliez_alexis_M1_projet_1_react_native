@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FlatList, SafeAreaView, StyleSheet } from "react-native";
 import uuid from "uuid-random";
-import Item from "../components/item";
+import Item from "./itemTask";
 import AddTask from "./addTask";
 
 const ListTasks = ({ nbTasks, nbChecked }) => {

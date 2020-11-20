@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { View } from "react-native";
 import { Input } from "react-native-elements";
-import ButtonAdd from "../components/buttonText";
+import ButtonAdd from "../_shared/buttonText";
 const addTask = ({ addItem }) => {
   const [valueItem, setValueItem] = useState("");
-
+     
   const handleChange = (text) => {
+    
     if (text !== " ") setValueItem(text);
   };
 

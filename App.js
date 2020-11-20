@@ -1,9 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { StyleSheet, View } from "react-native";
-import HeaderTop from "./components/header";
-import ListTasks from "./containers/listTasks";
-import Footer from "./containers/footer";
+import HeaderTop from "./components/_shared/header";
+import ListTasks from "./components/tasksEpic/listTasks";
+import Footer from "./components/_shared/footer";
 
 const App = () => {
   const [nbTasks, setNbTasks] = useState(0);
